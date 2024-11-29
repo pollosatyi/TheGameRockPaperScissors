@@ -25,17 +25,19 @@ namespace TheGameRockPaperScissors
             return false;
         }
 
+
         private bool CheckInputForCorrectNumber(int stepPlayer) => stepPlayer >= 1 && stepPlayer <= 3;
 
 
         private void PrintMenu()
         {
-            Console.WriteLine($"игрок {Name} делает ход" );
+            Console.WriteLine($"игрок {Name} делает ход");
             Console.WriteLine("Нажмите 1, чтобы выбрать камень");
             Console.WriteLine("\t  2,чтобы выбрать ножницы");
             Console.WriteLine("\t  3,чтобы выбрать ножницы");
             Console.WriteLine("Сделайте ход: ");
         }
+
 
         public override void GetNamePlayer()
         {
