@@ -39,10 +39,6 @@ namespace TheGameRockPaperScissors
         }
 
 
-        public override void GetNamePlayer()
-        {
-            Console.WriteLine("Введите имя игрока");
-            Name = Console.ReadLine();
-        }
+        
     }
 }

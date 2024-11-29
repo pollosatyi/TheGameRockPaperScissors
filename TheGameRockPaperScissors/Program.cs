@@ -27,6 +27,8 @@
                 {
                     Console.WriteLine("Это не число.Введите заново");
                 }
+                //AIPlayer aIPlayer = new AIPlayer();
+                //aIPlayer.GetNamePlayer();
             }
         }
     }

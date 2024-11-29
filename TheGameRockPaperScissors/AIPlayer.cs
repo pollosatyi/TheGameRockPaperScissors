@@ -8,14 +8,19 @@ namespace TheGameRockPaperScissors
 {
     public class AIPlayer : Player
     {
-        public override void GetNamePlayer()
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public override int MakeMove()
         {
-            throw new NotImplementedException();
+            PrintStep();
+            Random random = new Random();
+            return  random.Next() % 3+1;
+        }
+
+
+        private void PrintStep()
+        {
+            Console.WriteLine($"Игрок {Name} делает ход");
         }
     }
 }
