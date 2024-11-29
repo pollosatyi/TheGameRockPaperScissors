@@ -10,7 +10,7 @@ namespace TheGameRockPaperScissors
     {
         public string Name {  get; set; }
 
-
+        public abstract void GetNamePlayer();
 
         public abstract int MakeMove();
 
