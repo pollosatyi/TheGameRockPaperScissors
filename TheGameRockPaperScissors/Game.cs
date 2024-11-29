@@ -17,10 +17,11 @@ namespace TheGameRockPaperScissors
         }
 
 
-        public  void StartGame()
+        public void StartGame()
         {
-            _player1.GetNamePlayer();
-            _player2.GetNamePlayer();
+            int count = 1;
+            _player1.GetNamePlayer(count++);
+            _player2.GetNamePlayer(count++);
             PrintStart();
             bool IsPlayerWin = false;
             while (!IsPlayerWin)
@@ -49,17 +50,6 @@ namespace TheGameRockPaperScissors
         }
 
 
-        //public void StartGame(HumanPlayer player1, HumanPlayer player2)
-        //{
-
-        //}
-
-
-        //public void StartGame(AIPlayer player1, AIPlayer player2)
-        //{
-
-        //}
-
         private void PrintStepPlayer(int stepPlayer, Player player)
         {
             switch (stepPlayer)
@@ -76,28 +66,17 @@ namespace TheGameRockPaperScissors
             Console.WriteLine($"Игрок {player.Name} победил");
         }
 
-        private  void PrintStart()
+
+        private void PrintStart()
         {
-            if(typeof(HumanPlayer)==_player1.GetType()&&typeof(AIPlayer)==_player2.GetType())
-            Console.WriteLine($"Игра игрок человек {_player1.Name} против игрока компьютер {_player2.Name} началась");
-            else if(typeof(HumanPlayer)==_player1.GetType()&& typeof(HumanPlayer) == _player2.GetType())
+            if (typeof(HumanPlayer) == _player1.GetType() && typeof(AIPlayer) == _player2.GetType())
+                Console.WriteLine($"Игра игрок человек {_player1.Name} против игрока компьютер {_player2.Name} началась");
+            else if (typeof(HumanPlayer) == _player1.GetType() && typeof(HumanPlayer) == _player2.GetType())
                 Console.WriteLine($"Игра игрок человек {_player1.Name} против игрока человек {_player2.Name} началась");
             else
                 Console.WriteLine($"Игра игрок компьютер {_player1.Name} против игрока компьютер {_player2.Name} началась");
 
         }
-
-        //private  void PrintStart(HumanPlayer player1, HumanPlayer player2)
-        //{
-        //    Console.WriteLine($"Игра игрок человек {player1.Name} против игрока человек {player2.Name} началась");
-        //}
-
-
-        //private  void PrintStart(AIPlayer player1,AIPlayer player2)
-        //{
-        //    Console.WriteLine($"Игра игрок компьютер {player1.Name} против игрока компьютер {player2.Name} началась");
-
-        //}
 
     }
 }
