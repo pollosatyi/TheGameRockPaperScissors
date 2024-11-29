@@ -12,7 +12,7 @@ namespace TheGameRockPaperScissors
 
 
 
-        public 
+        public abstract int MakeMove();
 
         //public Player(string name)
         //{
