@@ -10,7 +10,7 @@ namespace TheGameRockPaperScissors
     {
         public override int MakeMove()
         {
-            PrintMenu();
+            
             string stepPlayerStr = Console.ReadLine();
             if (!CheckInputForInt(stepPlayerStr, out int stepPlayer)) { Console.WriteLine("Это не число"); return MakeMove(); }
             if (!CheckInputForCorrectNumber(stepPlayer)) { Console.WriteLine("Неверный номер команды"); return MakeMove(); }
@@ -29,7 +29,7 @@ namespace TheGameRockPaperScissors
         private bool CheckInputForCorrectNumber(int stepPlayer) => stepPlayer >= 1 && stepPlayer <= 3;
 
 
-        private void PrintMenu()
+        public override void PrintMenuStep()
         {
             Console.WriteLine($"игрок {Name} делает ход");
             Console.WriteLine("Нажмите 1, чтобы выбрать камень");
@@ -39,10 +39,6 @@ namespace TheGameRockPaperScissors
         }
 
 
-        public override void GetNamePlayer()
-        {
-            Console.WriteLine("Введите имя игрока");
-            Name = Console.ReadLine();
-        }
+        
     }
 }

@@ -10,9 +10,16 @@ namespace TheGameRockPaperScissors
     {
         public string Name {  get; set; }
 
-        public abstract void GetNamePlayer();
+        public  void GetNamePlayer()
+        {
+            Console.WriteLine("Введите имя игрока");
+            Name = Console.ReadLine();
+        }
 
         public abstract int MakeMove();
+
+
+        public abstract void PrintMenuStep();
 
         //public Player(string name)
         //{
