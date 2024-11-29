@@ -12,13 +12,14 @@ namespace TheGameRockPaperScissors
 
         public override int MakeMove()
         {
-            PrintStep();
+           
             Random random = new Random();
             return  random.Next() % 3+1;
         }
 
+       
 
-        private void PrintStep()
+        public override void PrintMenuStep()
         {
             Console.WriteLine($"Игрок {Name} делает ход");
         }

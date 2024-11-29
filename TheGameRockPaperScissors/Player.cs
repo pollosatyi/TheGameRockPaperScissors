@@ -18,6 +18,9 @@ namespace TheGameRockPaperScissors
 
         public abstract int MakeMove();
 
+
+        public abstract void PrintMenuStep();
+
         //public Player(string name)
         //{
         //    Name = name;
